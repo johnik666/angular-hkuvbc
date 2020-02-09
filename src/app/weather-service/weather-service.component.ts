@@ -8,18 +8,18 @@ export class WeatherServiceComponent {
   
   url;
   
-  constructor(private http:Http){
+  constructor(private http:Http)
+  {
     this.url='https://www.metaweather.com/api/location/';
   }
-
-
   getWeather(woeid)
   {
-  return this.http.get( this.url+woeid+'/'+location.rok+'/'+mesiac+'/'+den+'/').map((res)=>{res.json();
+  return this.http.get( this.url+woeid+'/2015/06/20/').map((res)=>{res.json();
   })
   }
 
 
 
 }
+// +rok+'/'+mesiac+'/'+den+'/'
 // 
