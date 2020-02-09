@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 export class WeatherServiceComponent {
   
   url;
-
+  
   constructor(private http:Http){
     this.url='https://www.metaweather.com/api/location/';
   }
@@ -15,7 +15,7 @@ export class WeatherServiceComponent {
 
   getWeather(woeid)
   {
-  return this.http.get( this.url+woeid+'/'+rok+'/'+mesiac+'/'+den+'/').map((res)=>{res.json();
+  return this.http.get( this.url+woeid+'/'+location.rok+'/'+mesiac+'/'+den+'/').map((res)=>{res.json();
   })
   }
 
